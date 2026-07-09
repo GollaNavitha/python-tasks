@@ -1,0 +1,826 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPd3kBLJDFRVupl+03Yi4ja",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/GollaNavitha/python-tasks/blob/main/assignment%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "bank = [\n",
+        "    [\n",
+        "        [\n",
+        "            [\"C101\", \"Rahul\", \"Savings\", 85000],\n",
+        "            [\"C102\", \"Anita\", \"Current\", 150000],\n",
+        "            [\"C103\", \"Kiran\", \"Loan\", 500000]\n",
+        "        ],\n",
+        "        [\n",
+        "            [\"C104\", \"Sneha\", \"Savings\", 95000],\n",
+        "            [\"C105\", \"Vikram\", \"Current\", 275000],\n",
+        "            [\"C106\", \"Meena\", \"Loan\", 750000]\n",
+        "        ]\n",
+        "    ],\n",
+        "\n",
+        "    [\n",
+        "        [\n",
+        "            [\"C201\", \"Arjun\", \"Savings\", 120000],\n",
+        "            [\"C202\", \"Pooja\", \"Current\", 325000],\n",
+        "            [\"C203\", \"Ramesh\", \"Loan\", 900000]\n",
+        "        ],\n",
+        "        [\n",
+        "            [\"C204\", \"Priya\", \"Savings\", 45000],\n",
+        "            [\"C205\", \"Amit\", \"Current\", 185000],\n",
+        "            [\"C206\", \"Divya\", \"Loan\", 650000]\n",
+        "        ]\n",
+        "    ],\n",
+        "\n",
+        "    [\n",
+        "        [\n",
+        "            [\"C301\", \"Nikhil\", \"Savings\", 78000],\n",
+        "            [\"C302\", \"Kavya\", \"Current\", 240000],\n",
+        "            [\"C303\", \"Suresh\", \"Loan\", 1000000]\n",
+        "        ],\n",
+        "        [\n",
+        "            [\"C304\", \"Neha\", \"Savings\", 135000],\n",
+        "            [\"C305\", \"Rohan\", \"Current\", 410000],\n",
+        "            [\"C306\", \"Asha\", \"Loan\", 550000]\n",
+        "        ]\n",
+        "    ]\n",
+        "]\n",
+        "print(bank)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bWq3eT6zXh5u",
+        "outputId": "d34e3c6f-9ff9-4204-aa32-7d7c007d25c2"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[['C101', 'Rahul', 'Savings', 85000], ['C102', 'Anita', 'Current', 150000], ['C103', 'Kiran', 'Loan', 500000]], [['C104', 'Sneha', 'Savings', 95000], ['C105', 'Vikram', 'Current', 275000], ['C106', 'Meena', 'Loan', 750000]]], [[['C201', 'Arjun', 'Savings', 120000], ['C202', 'Pooja', 'Current', 325000], ['C203', 'Ramesh', 'Loan', 900000]], [['C204', 'Priya', 'Savings', 45000], ['C205', 'Amit', 'Current', 185000], ['C206', 'Divya', 'Loan', 650000]]], [[['C301', 'Nikhil', 'Savings', 78000], ['C302', 'Kavya', 'Current', 240000], ['C303', 'Suresh', 'Loan', 1000000]], [['C304', 'Neha', 'Savings', 135000], ['C305', 'Rohan', 'Current', 410000], ['C306', 'Asha', 'Loan', 550000]]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 1. Print Rahul's complete record.\n",
+        "print(bank[0][0][0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WT4xFD5wY1rf",
+        "outputId": "d5f07d5a-59df-4e32-f233-b1b1f7b3020c"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['C101', 'Rahul', 'Savings', 85000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 2. Print Anita's account type\n",
+        "print(bank[0][0][1][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Hc-bTFTWZuOz",
+        "outputId": "e6ae61ab-ed81-40a1-f125-ba964787011f"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Current\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3. Print Kiran's loan amount.\n",
+        "print(bank[0][0][2][3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DyaqqhKDZ2xe",
+        "outputId": "da77ae6e-c577-45a7-922b-1112b9c0e68a"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "500000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 4. Print Sneha's customer ID.\n",
+        "print(bank[0][1][0][0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eW1qMVxyZ5OP",
+        "outputId": "b8c3843a-2a20-498a-d5fb-f90bae93ceaf"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "C104\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 5. Print Vikram's balance.\n",
+        "print(bank[0][1][1][3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8SeoaLIXaBHz",
+        "outputId": "8d049a16-8c7a-451d-af4f-1bb2264ff9e6"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "275000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 6. Print Meena's complete record.\n",
+        "print(bank[0][1][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JobOpYLkaDAX",
+        "outputId": "47d0bd87-cac5-465d-8eda-4177332af3cf"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['C106', 'Meena', 'Loan', 750000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 7. Print Arjun's customer ID.\n",
+        "print(bank[1][0][0][0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xjax0clxaHSI",
+        "outputId": "88295021-0a20-4dd9-b95c-9450b0d67d33"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "C201\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 8. Print Pooja's name.\n",
+        "print(bank[1][0][1][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ilXy4SIxaNeF",
+        "outputId": "297affdd-d24c-4e69-ad09-c8a3eff377b0"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Pooja\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 9. Print Ramesh's account type.\n",
+        "print(bank[1][0][2][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oQfnIh4ZaO-p",
+        "outputId": "6263ede9-fc88-4883-86d9-40d5943bcdd1"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Loan\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 10. Print Priya's balance.\n",
+        "print(bank[1][1][0][3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S7NsZPaGaS0C",
+        "outputId": "107d4954-6b6d-4de5-9f9e-26c402aa6f7c"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "45000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 11. Print Amit's account type.\n",
+        "print(bank[1][1][1][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wYUiK81kaXK5",
+        "outputId": "8776075b-526f-45b6-db01-6850b2bfaf00"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Current\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 12. Print Divya's customer ID.\n",
+        "print(bank[1][1][2][0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hDhg_qV7aa5Z",
+        "outputId": "e8dd49a3-ccc2-488e-8ade-41265e21a791"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "C206\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 13. Print Nikhil's account type.\n",
+        "print(bank[2][0][0][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VX3M6NLragZ8",
+        "outputId": "8fcc0ba2-bc2d-4d01-98c6-542ac3c697b5"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Savings\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 14. Print Kavya's balance.\n",
+        "print(bank[2][0][1][3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "veSFpI2JagWb",
+        "outputId": "4ddd3b28-f145-46bf-857d-997ba716d30f"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "240000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 15. Print Suresh's loan amount.\n",
+        "print(bank[2][0][2][3])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KsQeWThrawc6",
+        "outputId": "fa830812-07c9-4896-8a31-4475afbc91c0"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1000000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 16. Print Neha's name.\n",
+        "print(bank[2][1][0][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7T7ga_4KazHF",
+        "outputId": "4e1a8c66-536d-4aa6-8089-6ceb769b3a7f"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Neha\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 17. Print Rohan's complete record.\n",
+        "print(bank[2][1][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8cLTgJVYay7I",
+        "outputId": "c7125b32-5041-4904-9717-45e8c446e116"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['C305', 'Rohan', 'Current', 410000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 18. Print Asha's account type.\n",
+        "print(bank[2][1][2][2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pdAQPXzcayoW",
+        "outputId": "b67de6e2-98d8-43f5-b465-46d9c460e55e"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Loan\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 19. Print all customers in Bank 1, Branch 1.\n",
+        "print(bank[0][0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kGxhAhbHbCkA",
+        "outputId": "7b92aa1f-3f86-4604-cb59-30bd607a3062"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['C101', 'Rahul', 'Savings', 85000], ['C102', 'Anita', 'Current', 150000], ['C103', 'Kiran', 'Loan', 500000]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 20. Print all customers in Bank 1, Branch 2.\n",
+        "print(bank[0][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A8EkHMhSbCdZ",
+        "outputId": "9035b7c3-513d-453e-ad24-f06111cd6815"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['C104', 'Sneha', 'Savings', 95000], ['C105', 'Vikram', 'Current', 275000], ['C106', 'Meena', 'Loan', 750000]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 21. Print all customers in Bank 2, Branch 1.\n",
+        "print(bank[1][0])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M8r4pcUSbCMn",
+        "outputId": "7a9bed27-4f45-44bf-9986-3b46a911609e"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['C201', 'Arjun', 'Savings', 120000], ['C202', 'Pooja', 'Current', 325000], ['C203', 'Ramesh', 'Loan', 900000]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 22. Print all customers in Bank 2, Branch 2.\n",
+        "print(bank[1][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "C6aEHugvbOPG",
+        "outputId": "1ba5e61a-fbf4-420a-9f33-1f72f7deea5e"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['C204', 'Priya', 'Savings', 45000], ['C205', 'Amit', 'Current', 185000], ['C206', 'Divya', 'Loan', 650000]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 23. Print all customers in Bank 3, Branch 1.\n",
+        "print(bank[2][0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kJJziz2XbOLm",
+        "outputId": "c739a1b5-7ea6-4d3d-881e-db149acffc51"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['C301', 'Nikhil', 'Savings', 78000], ['C302', 'Kavya', 'Current', 240000], ['C303', 'Suresh', 'Loan', 1000000]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 24. Print all customers in Bank 3, Branch 2.\n",
+        "print(bank[2][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "X_2fXU6_bOJK",
+        "outputId": "a65022a6-5dc5-4869-8478-0cbed10fad7b"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[['C304', 'Neha', 'Savings', 135000], ['C305', 'Rohan', 'Current', 410000], ['C306', 'Asha', 'Loan', 550000]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 25. Print all branches of Bank 1.\n",
+        "print(bank[0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p3A7q8hKbOGY",
+        "outputId": "370dbd00-01c0-41d1-e8f5-23c84d88ff64"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[['C101', 'Rahul', 'Savings', 85000], ['C102', 'Anita', 'Current', 150000], ['C103', 'Kiran', 'Loan', 500000]], [['C104', 'Sneha', 'Savings', 95000], ['C105', 'Vikram', 'Current', 275000], ['C106', 'Meena', 'Loan', 750000]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 26. Print all branches of Bank 2.\n",
+        "print(bank[1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N_rj4IsabOCb",
+        "outputId": "627cc978-9704-48f1-82e2-a4e9d720b0c7"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[['C201', 'Arjun', 'Savings', 120000], ['C202', 'Pooja', 'Current', 325000], ['C203', 'Ramesh', 'Loan', 900000]], [['C204', 'Priya', 'Savings', 45000], ['C205', 'Amit', 'Current', 185000], ['C206', 'Divya', 'Loan', 650000]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 27. Print all branches of Bank 3.\n",
+        "print(bank[2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lHtzntPmbN52",
+        "outputId": "f6d92767-f33e-4ce0-c166-f82b9c0bc77a"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[['C301', 'Nikhil', 'Savings', 78000], ['C302', 'Kavya', 'Current', 240000], ['C303', 'Suresh', 'Loan', 1000000]], [['C304', 'Neha', 'Savings', 135000], ['C305', 'Rohan', 'Current', 410000], ['C306', 'Asha', 'Loan', 550000]]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 28. Print the first customer from every bank's first branch.\n",
+        "for i in range(len(bank)):\n",
+        "    print(bank[i][0][0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sdxa8qSobNxN",
+        "outputId": "dc28202f-f940-44ec-cf17-52e2de41ffaf"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['C101', 'Rahul', 'Savings', 85000]\n",
+            "['C201', 'Arjun', 'Savings', 120000]\n",
+            "['C301', 'Nikhil', 'Savings', 78000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 29. Print the second customer from every bank's second branch.\n",
+        "for i in range(len(bank)):\n",
+        "    print(bank[i][1][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bOiRUWuAbNbi",
+        "outputId": "40084304-6461-46ac-b8ca-717998407803"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['C105', 'Vikram', 'Current', 275000]\n",
+            "['C205', 'Amit', 'Current', 185000]\n",
+            "['C305', 'Rohan', 'Current', 410000]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 30. Print the loan amount of the last customer in Bank 3, Branch 2.\n",
+        "print(bank[2][1][2][3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Ji620ptbyxN",
+        "outputId": "9e49165c-3ae9-4b99-b37b-649e77c50d3f"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "550000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "sNkpkmsuXbJw"
+      }
+    }
+  ]
+}
